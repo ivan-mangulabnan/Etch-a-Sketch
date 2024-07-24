@@ -18,9 +18,16 @@ body {
 }
 
 .box {
-    flex: 0 0 calc(calc(100% / 50) - 4px);
+    flex: 0 0 calc(calc(100% / 4) - 4px);
     background-color: antiquewhite;
-    padding-top: calc(calc(100% / 50) - 4px);
+    padding-top: calc(calc(100% / 4) - 4px);
     width: 0;
     overflow: hidden;
+}
+
+/* button */
+
+#gridCount {
+    margin: 5px;
+    padding: 2px;
 }
