@@ -18,9 +18,18 @@ function createBox(gridCount) {
 
         console.log(gridCount);
         const box = document.createElement(`div`);
+        box.classList.add(`box`);
         box.classList.add(`grid`);
-        box.style.flex = `0 0 calc(calc(100% / ${gridCount}) - 4px)`;
-        box.style.paddingTop = `calc(calc(100% / ${gridCount}) - 4px)`;
+        box.style.flex = `0 0 calc(calc(100% / ${gridCount}) - 2px)`;
+        box.style.paddingTop = `calc(calc(100% / ${gridCount}) - 2px)`;
         container.appendChild(box);
     }
+
+    const boxes = document.querySelectorAll(`.box`);
+
+    boxes.forEach((box) => {
+        box.addEventListener(`mouseover`, () => {
+            box.style.backgroundColor = `red`;
+        })
+    })
 }
